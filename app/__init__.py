@@ -16,5 +16,6 @@ def create_app(config_name):
     db.init_app(app)
 
     app.register_error_handler(CustomError, handle_custom_error)
+    app.register_error_handler(415, unsupported_media_type)
 
     return app
