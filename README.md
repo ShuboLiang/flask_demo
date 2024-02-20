@@ -12,7 +12,7 @@ pip install gunicorn
 gunicorn -w 4 run:app
 ```
 
-其中 `run` 代表 `run.py`,`app` 代表 Flask 实例
+其中 `run` 代表 `run.py`，`app` 代表 Flask 实例，-w 4 表示 4 个工作进程。
 
 ### 端口怎么改变
 
