@@ -32,6 +32,10 @@ class DevelopmentConfig(Config):
     SQLALCHEMY_DATABASE_URI = (
         "mysql+pymysql://weather:weather%40123@106.13.179.38:6024/weather_bishe"
     )
+
+    CACHE_REDIS_URL = "redis://localhost:6379/0"
+    CACHE_TYPE = "redis"
+    CACHE_DEFAULT_TIMEOUT = 60
     # ... 开发环境专属配置 ...
 
 

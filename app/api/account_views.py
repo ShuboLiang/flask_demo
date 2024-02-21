@@ -6,8 +6,8 @@ from app.valid import validate_with_schema, AccountSchema
 from flask import request
 
 
-@account_bp.route("/", methods=["GET"])
+@account_bp.route("/all", methods=["GET"])
 @validate_with_schema(AccountSchema(), data_source="query")
-def get_users():
+def get_all_users():
     all_users = get_all_users()
     return json_response(all_users)

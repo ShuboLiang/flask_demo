@@ -1,5 +1,7 @@
 flask
-flask_sqlalchemy
+Flask-SQLAlchemy
 marshmallow
 pymysql
+redis
+flask-caching
 gunicorn
