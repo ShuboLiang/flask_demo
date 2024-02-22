@@ -11,3 +11,11 @@ class Accounts(db.Model):
     def __init__(self, username, password):
         self.username = username
         self.password = password
+
+    def serialize(self):
+        return {
+            "id": self.id,
+            "username": self.username,
+            "email": self.email,
+            "created_at": self.created_at,
+        }

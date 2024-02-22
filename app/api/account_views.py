@@ -1,9 +1,7 @@
 from app.api import account_bp
 from app.services import *
 from app.utils import json_response
-from app.errors import CustomError
 from app.valid import validate_with_schema, AccountSchema
-from flask import request
 from flask.views import MethodView
 
 

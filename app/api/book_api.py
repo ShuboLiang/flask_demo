@@ -1,5 +1,4 @@
-from flask import Flask
-from flask_restful import Resource, Api
+from flask_restful import Resource
 from app.valid import validate_with_schema, BookSchema
 
 
@@ -10,7 +9,7 @@ class BookAPI(Resource):
             return "book1, book2, book3"
         else:
             # 返回特定书籍
-            return "book with id"
+            return f"book with id {id}"
 
     def post(self):
         # 创建新书籍
