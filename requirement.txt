@@ -6,4 +6,5 @@ redis
 flask-caching
 flask-migrate
 flask-restful
+flask-cors
 gunicorn

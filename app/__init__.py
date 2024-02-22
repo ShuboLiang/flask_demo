@@ -6,6 +6,7 @@ from app.errors import *
 from app.cache import cache
 from flask_migrate import Migrate
 from flask_restful import Api
+from flask_cors import CORS
 
 
 def create_app(config_name):
@@ -25,5 +26,5 @@ def create_app(config_name):
     app.register_error_handler(415, unsupported_media_type)
     api = Api(app)
     api.add_resource(BookAPI, "/books/", "/books/<int:id>")
-
+    CORS(app, resources={r"/*": {"origins": "*"}})
     return app
