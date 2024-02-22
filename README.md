@@ -31,3 +31,16 @@ gunicorn -w 4 -b 0.0.0.0:5000 run:app
 ```
 
 使用 `0.0.0.0` 将允许你的应用接收发往所有服务器 IP 地址的请求，这通常用于生产部署。但是，请注意，在生产环境中，你可能还需要配置其他的安全和性能相关的设置。
+
+## flask shell
+
+```
+export FLASK_APP=app:create_app('development')
+```
+
+## migrate 用法
+
+1. 定义好数据模型
+2. `flask db init`
+3. `flask db migrate`
+4. `flask db upgrade`

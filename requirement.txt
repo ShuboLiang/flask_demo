@@ -4,4 +4,6 @@ marshmallow
 pymysql
 redis
 flask-caching
+flask-migrate
+flask-restful
 gunicorn

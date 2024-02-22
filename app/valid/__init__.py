@@ -16,10 +16,6 @@ def validate_with_schema(schema, data_source="json"):
                 data = request.args
             else:
                 return json_error_response(message="Invalid data source", status=400)
-
-            if not data:
-                return json_error_response(message="No input data provided", status=400)
-
             try:
                 # 校验数据
                 validated_data = schema.load(data)
@@ -39,3 +35,4 @@ def validate_with_schema(schema, data_source="json"):
 
 
 from .account_schema import *
+from .book_schema import *
